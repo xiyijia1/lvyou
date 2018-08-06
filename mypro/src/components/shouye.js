@@ -7,7 +7,7 @@ import $ from "jquery";
 
 import "../css/shouye.css"
 import 'antd/dist/antd.css';
-
+import Top from "./top";
 
 import { Carousel } from 'antd';
 import banner1 from '../images/banner1.jpg'
@@ -124,6 +124,7 @@ class Shouye extends React.Component {
 	render() {
 		return(
 			<div>
+				<Top/>
 				<Carousel autoplay>
 				    <div><img src={banner1}/></div>
 				    <div><img src={banner2}/></div>

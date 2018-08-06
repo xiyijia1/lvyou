@@ -194,6 +194,7 @@ input,a{outline:none;}
 	width:1170px;
 	height:100px;
 	margin: 0 auto;
+	margin-top: 2px;
 }
 .Zy_TopLogo{
 	float: left;
@@ -368,8 +369,9 @@ input,a{outline:none;}
 }
 .Zy_luyou{
 	position: absolute;
-	top:28px;
+	top:31px;
 	left:-21px;
+	z-index: 999;
 }
 .Zy_Ly{
 	width:130px;
@@ -379,6 +381,7 @@ input,a{outline:none;}
 	text-align: center;
 	font-size: 14px;
 	color:#fff;
+	cursor: pointer;
 }
 
 .Zy_luyou{
@@ -416,6 +419,7 @@ input,a{outline:none;}
 	height:40px;
 	text-align: center;
 	line-height: 38px;
+	cursor: pointer;
 }
 .Zy_BunLi1{
 	background: #cd141c;
@@ -427,6 +431,8 @@ input,a{outline:none;}
 	background: #ff5722;
 	color:#fff;
 	display: none;
+	position: relative;
+	z-index: 999;
 }
 .Zy_BunLi2 span{
 	display: inline-block;
