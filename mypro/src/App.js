@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import {Link,BrowserRouter as Router,Route,Redirect,Switch} from "react-router-dom"
+import Regist from "./components/regist"
+import Login from "./components/login"
+import Shouye from "./components/shouye"
+import Target from "./components/target"
+import Tujinglist from "./components/tujinglist"
+import Gouwuche from "./components/gouwuche"
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Router>
+        		<div>
+        			<Switch>
+        				<Route path="/regist" component={Regist}></Route>
+        				<Route path="/login" component={Login}></Route>
+        				<Route path="/shouye" component={Shouye}></Route>
+        				<Route path="/target" component={Target}></Route>
+        				<Route path="/tujinglist" component={Tujinglist}></Route>
+        				<Route path="/gouwuche" component={Gouwuche}></Route>
+        				<Redirect to="/shouye" />
+        			</Switch>
+        		</div>
+        		
+        	</Router>
       </div>
     );
   }

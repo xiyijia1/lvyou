@@ -2,7 +2,7 @@ import React from "react"
 import $ from "jquery"
 import {BrowserRouter as Router,Link,Switch,Redirect,Route} from "react-router-dom"
 import '../css/gouwuche.css';
-import qurl1 from "../images/logo.jpg"
+import qurl1 from "../images/logoyg.jpg"
 
 class Gouwu extends React.Component{
 	

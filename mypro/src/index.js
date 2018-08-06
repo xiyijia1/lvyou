@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import App from './App';
-import Target from "./components/target"
+import App from './App';
+//import Gouwuche from "./components/gouwuche"
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<Target />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

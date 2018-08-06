@@ -14,6 +14,15 @@ class Top extends React.Component{
 			num:true
 		}
 	}
+	tap1(){
+		
+		this.props.history.push("/login")
+		
+	}
+	tap2(){
+		this.props.history.push("/regist")
+	}
+	
 	ZyXl(){
 		if(this.state.num){
 			$('.Zy_xUl').css({display:'block'});
@@ -67,14 +76,14 @@ class Top extends React.Component{
 								</div>
 							</li>
 							<li className='Zy_TopLi5 zyt'>
-								<div className='ZyTop5'>登录</div>
+								<div className='ZyTop5' onClick={this.tap1.bind(this)}>登录</div>
 								<div className='ZyTop51'>
 									<input type='text' id='ZyTopTxT' className='ZyTopTXT' placeholder='请输入邮箱或手机号'/><br/>
 									<input type='password' id='ZyTopTexT' className='ZyTopTXT' placeholder='······'/><br/>
 									<button id='ZyTopBtn'>登录</button>
 								</div>
 							</li>
-							<li className='Zy_TopLi6 zyt'>注册</li>
+							<li className='Zy_TopLi6 zyt' onClick={_this.tap2.bind(_this)}>注册</li>
 							<li className='Zy_TopLi7 zyt'>
 								<div className='ZyTop71'>购物车<span>0</span>件</div>
 							</li>
