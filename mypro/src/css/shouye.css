@@ -1,3 +1,8 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
 /*-----------------------banner------------------------*/
 
 .ant-carousel {
@@ -18,7 +23,7 @@
 	height: 252px;
 	margin: 0 auto;
 	margin-top: 30px;
-	
+	margin-bottom: 20px;
 }
 
 .plan_left {
@@ -64,8 +69,72 @@
 	text-indent: 5px;
 	cursor: pointer;
 }
+.form_grop:nth-of-type(1):hover .didianList{
+	display: block;
+}
 .didianList{
 	position: absolute;
+    height: auto;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+    z-index: 999;
+    left: 82px;
+    top: 43px;
+    width: 313px;
+    display: none;
+}
+.close{
+	text-align: right;
+	box-sizing: border-box;
+	padding-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    cursor: pointer;
+}
+.didianUl{
+	width: 258px;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.didianUl li{
+	list-style: none;
+	float: left;
+    margin-left: 6px;
+    margin-top: 6px;
+    background-color: #FFFFFF;
+    border: 1px solid #CFCFCF;
+    border-radius: 4px;
+    color: #555555;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    width: 80px;
+    display: inline-block;
+    padding: 0 9px;
+    text-align: center;
+    cursor: pointer;
+}
+.didianUl li:hover{
+	color: #ff7200;
+	border: 1px solid #ff7200;
+}
+.showAll{
+	margin: 0 auto;
+	width: 14px;
+    height: 14px;
+    margin-top: 1px;
+    line-height: 14px;
+    vertical-align: text-top;
+     background-image: url(../images/glyphicons-halflings.png); 
+     background-position-x: -314px ; 
+     background-position-y:  -123px;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 .renshu_group,.shijian_group{
 	margin-left: 10px;
@@ -219,4 +288,128 @@
 }
 .con p:nth-of-type(1){
 	margin-top: 20px!important;
+}
+
+/*-----------------------门票------------------*/
+.menpiao{
+	width: 1170px;
+	height: 340px;
+	margin: 0 auto;
+}
+.menpiao_tit{
+	border-bottom: 1px solid #eeeeee;
+    height: 40px;
+    margin-bottom: 27px;
+    width: 100%;
+}
+.menpiao_titL{
+	float: left;
+    width: 450px;
+    line-height: 40px;
+}
+.menpiao_titL h4{
+	font-size: 30px;
+    color: #999999;
+    cursor: default;
+    
+    float: left;
+}
+.menpiao_titL img{
+	margin-left: 26px;
+	width: 138px;
+	height: 26px;
+}
+.menpiao_titR{
+	float: right;
+	line-height: 40px;
+}
+
+.menpiao_titR span{
+	text-decoration: none;
+    color: #514b4d;
+    font-size: 13px;
+    margin-right: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.menpiao_titR span:nth-child(5){
+	text-decoration: none;
+    color: #fe6700;
+    font-size: 13px;
+    font-weight: 400;
+}
+.menpiao_con{
+	display: flex;
+	justify-content: space-around;
+}
+.menpiao_con dl{
+	width: 280px;
+	
+}
+.menpiao_con dl dt img{
+	width: 280px;
+	height: 210px;
+} 
+.menpiao_con dl dd{
+	
+}
+.menpiao_con dl dd h5{
+	margin-left: 15px;
+    margin-top: 5px;
+    line-height: 23px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+.menpiao_con dl dd p{
+	margin-left: 15px;
+	margin-bottom: 0;
+	margin-top: -5px;
+	height: 42px;
+}
+.menpiao_con dl dd p span{
+	color: #cc141c;
+    font-size: 30px;
+}
+.menpiao_con dl dd p em{
+	font-style: normal;
+	color: #a1a1a1;
+    font-size: 12px;
+}
+.menpiao_con dl dd p strong{
+	font-weight: normal;
+	color: #a1a1a1;
+    font-size: 12px;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+/*--------------------服务--------------*/
+.fuwu{
+	width: 1170px;
+	height: 631px;
+	margin: 0 auto;
+}
+.fuwu_tit{
+	border-bottom: 1px solid #eeeeee;
+    margin-bottom: 30px;
+    width: 100%;
+    margin-top: 20px;
+    
+}
+.fuwu_tit h4{
+	font-size: 30px;
+    color: #999999;
+    cursor: default;
+    line-height: 50px;
+    margin-bottom: 0;
+}
+.fuwu_con{
+	display: flex;
+	justify-content: space-between;
+}
+.fuwu_con img{
+	cursor: pointer;
 }
