@@ -158,8 +158,8 @@ class Tujing extends React.Component {
    					var Had = document.getElementsByClassName("zh-b-bottom")[0].offsetWidth;
    					var Htop = document.getElementsByClassName("zh-b-bottom")[0].offsetTop;
    					var col =  Math.floor(Had/devWidth);
-   					var ml = 3;
-   					var mt = 8;
+   					var ml = 15;
+   					var mt = 15;
    					var arr = [];
    					var str = "";
    					for(var i = 0; i < col; i++){

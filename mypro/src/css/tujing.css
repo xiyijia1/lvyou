@@ -47,12 +47,11 @@ a{
     overflow: hidden;
 }
 .zh-c-left{
-    width: 250px;
+    width: 275px;
     float: left;
     border: 1px solid #efefef;
     padding-left: 10px;
     height: 550px;
-    padding-right: 40PX;
 }
 .zh-c-l-top{
     height: 225px;
@@ -88,8 +87,8 @@ a{
 }
 .zh-c-r-img{
 	border: 1px solid pink;
-	width: 215px;
-	height: 250px;
+	width: 238px;
+	height: 275px;
 	padding: 10px;
 	background: #f8f8f8;
 	float: left;
@@ -117,11 +116,11 @@ a{
 	font-size: 23px;
 }
 .zh-bottom{
-	min-height: 950px;
+	min-height: 1050px;
 	margin-top: 5px;
 }
 .zh-b-top{
-	height: 45px;
+	height: 60px;
 	background: #eee;
 	padding-top: 15px;
 	display: flex;
@@ -157,7 +156,7 @@ a{
 	position: relative;
 }
 .zh-b-b-img{
-	width: 245px;
+	width: 250px;
 	border: 1px solid pink;
 	float: left;
 	padding: 10px;
@@ -166,7 +165,7 @@ a{
 }
 .zh-b-b-img img{
 	display: block;
-	width: 245px;
+	width: 225px;
 	height: 165px;
 }
 .zh-tit{
