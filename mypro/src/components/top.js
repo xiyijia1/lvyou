@@ -4,7 +4,7 @@ import ZyImgXina from '../images/xina.jpg'
 import ZyImgLogo from '../images/logod.jpg'
 import ZyImgPosition from '../images/position.jpg'
 import ZyImgFuWu from '../images/tel.jpg'
-
+import '../css/top.css'
 import $ from "jquery"
 
 class Top extends React.Component{
