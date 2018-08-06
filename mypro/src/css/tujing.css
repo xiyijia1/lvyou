@@ -1,0 +1,247 @@
+a{
+	text-decoration: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+#zh-con{
+    width: 1080px;
+    min-height: 500px;
+    overflow: hidden;
+    margin: 50px auto;
+}
+.zh-top{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0;
+    background: #DCF5FC;
+}
+.zh-top>b{
+    flex: 1;
+    font-size: 25px;
+    color: #747ed9;
+    font-weight: 100;
+}
+.zh-right>input{
+    outline: 0;
+    border: 0;
+    width: 290px;
+    height: 25px;
+    text-indent: 3px;
+}
+.zh-right>button{
+    width: 45px;
+    height: 25px;
+    background: #dffffc;
+    border: 0;
+    outline: 0;
+    font-size: 12px;
+    color: #747ed9;
+    cursor: pointer;
+}
+.zh-center{
+    height: 560px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+.zh-c-left{
+    width: 250px;
+    float: left;
+    border: 1px solid #efefef;
+    padding-left: 10px;
+    height: 550px;
+    padding-right: 40PX;
+}
+.zh-c-l-top{
+    height: 225px;
+}
+.zh-c-l-top>p{
+    line-height: 50px;
+    font-size:16px;
+    color: #a1a2a2;
+}
+.zh-active{
+    padding: 5px 13px;
+    border: 0;
+    border: 1px solid #d5e7ed;
+    background: #eaf4ff;
+    color: #007ed9;
+    margin-right: 10px;
+    outline: none;
+    margin-bottom: 15px;
+}
+.zh-active:hover{
+	cursor: pointer;
+	color: #3399ff;
+}
+.zh-c-l-bottom>p{
+    line-height: 50px;
+    font-size:16px;
+    color: #a1a2a2;
+}
+.zh-c-right{
+    width: 760px;
+    float: right;
+    overflow: hidden;
+}
+.zh-c-r-img{
+	border: 1px solid pink;
+	width: 215px;
+	height: 250px;
+	padding: 10px;
+	background: #f8f8f8;
+	float: left;
+	position: relative;
+	margin: 0 15px 6px 0;
+}
+.zh-c-r-img img{
+	display: block;
+	width: 215px;
+	height: 250px;
+	cursor: pointer;
+}
+.zh-c-r-img span{
+	display: block;
+	position: absolute;
+	left: 10px;
+	top: 45px;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: rgba(233,189,233,0.5);
+	border: 1px solid #fff;
+	border-left: 0;
+	font-size: 23px;
+}
+.zh-bottom{
+	min-height: 950px;
+	margin-top: 5px;
+}
+.zh-b-top{
+	height: 45px;
+	background: #eee;
+	padding-top: 15px;
+	display: flex;
+}
+
+.zh-b-top span{
+	display: block;
+	width: 145px;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+	color: #333;
+	background: #f8f8f8;
+	cursor: pointer;
+}
+
+.zh-b-top>i{
+	flex: 1;
+}
+.zh-b-top .zh-active1{
+	background: #66ccff;
+	color: #fff;
+}
+.zh-b-top span:nth-of-type(3){
+	height: 35px;
+	width: 125px;
+	background: url(../images/zhtj_ui.png) no-repeat 0 -460px;
+}
+.zh-b-bottom{
+	/*min-height: 300px;*/
+	/*border: 1px solid blue;*/
+	margin-top: 20px;
+	position: relative;
+}
+.zh-b-b-img{
+	width: 245px;
+	border: 1px solid pink;
+	float: left;
+	padding: 10px;
+	position: absolute;
+	min-height: 200px;
+}
+.zh-b-b-img img{
+	display: block;
+	width: 245px;
+	height: 165px;
+}
+.zh-tit{
+	display: flex;
+	font-size: 14px;
+	padding: 0 15px;
+	line-height: 30px;
+}
+.zh-tit>span:nth-child(1){
+	flex: 1;
+	font-size: 16px;
+	color: #0076da;
+}
+.zh-tit>span:nth-child(2){
+	color: #a1a4ff;
+}
+.zh-tit1{
+	text-align: right;
+	color: #333;
+}
+.zh-tit1>em{
+	display: inline-block;
+	width: 20px;
+	height: 16px;
+}
+.zh-tit1>span{
+	display: inline-block;
+	font-size: 12px;
+	padding-right: 4px;
+}
+.zh-tit1>em:nth-of-type(1){
+	background: url(../images/zhtj_ui.png) no-repeat 0 -15px;
+}
+.zh-tit1>em:nth-of-type(2){
+	background: url(../images/zhtj_ui.png) no-repeat -25px -15px;
+}
+.zh-tit1>em:nth-of-type(3){
+	background: url(../images/zhtj_ui.png) no-repeat -49px -15px;
+}
+
+.zh-tit1>em:hover{
+	 background-position-y: -35px;
+}
+.zh-tit1>em:nth-of-type(1):hover{
+	 background-position-y: -15px;
+}
+.zh-tit2{
+	height: 40px;
+	border-top: 1px dotted #cecece;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	display: flex;
+}
+.zh-tit2>img{
+	width: 15px;
+	height: 15px;
+	display: block;
+	border: 0;
+}
+.zh-tit2>span:nth-of-type(1){
+	padding: 0 10px;
+}
+.zh-tit2>span:nth-of-type(2){
+	padding-right: 5px;
+	flex: 1;
+}
+.zh-tit2>em{
+	font-style: normal;
+	display: block;
+	width: 17px;
+	height: 15px;
+	background: url(../images/zhtj_ui.png) no-repeat -73px -17px;
+}
+
+.zh-tit2>em:hover{
+	background-position-y: -37px;
+}
