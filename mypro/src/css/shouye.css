@@ -1,0 +1,222 @@
+/*-----------------------banner------------------------*/
+
+.ant-carousel {
+	width: 100%;
+	height: 316px;
+}
+
+.ant-carousel .slick-slide img {
+	width: 100%;
+	height: 316px;
+}
+
+
+/*-----------------------plan------------------*/
+
+.plan {
+	width: 1170px;
+	height: 252px;
+	margin: 0 auto;
+	margin-top: 30px;
+	
+}
+
+.plan_left {
+	width: 370px;
+	height: 249px;
+	float: left;
+}
+
+.plan_left h3 {
+	width: 420px;
+	text-align: center;
+	color: #3c3c3c;
+	font-family: 'microsoft yahei';
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 20px;
+	font-weight: 400;
+}
+.form_grop{
+	width: 420px;
+	height: 55px;
+	position: relative;
+}
+
+.form_grop label{
+	color: #5f5f5f;
+  font-family: 'microsoft yahei';
+  line-height: 35px;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 5px;
+  width: 72px;
+  text-align: right;
+  float: left;
+}
+#didian{
+	width: 313px;
+	height: 38px;
+	background: url(../images/plan.png) ;
+	border: none;
+	margin-left: 10px;
+	font-size: 12px;
+	text-indent: 5px;
+	cursor: pointer;
+}
+.didianList{
+	position: absolute;
+}
+.renshu_group,.shijian_group{
+	margin-left: 10px;
+	float: left;
+	display: flex;
+	width: 313px;
+	justify-content: space-between;
+}
+.renshu_group button,.shijian_group button{
+	width: 76px;
+	height: 38px;
+	border: none;
+	outline: none;
+	background: url(../images/plan2.jpg) no-repeat;
+	cursor: pointer;
+}
+.shijian_group button{
+	background-position-y: -60px;
+}
+#qinglv,#liangtian{
+	background-position-x: -81px;
+}
+#jiating,#santian{
+	background-position-x: -157px;
+}
+#xiaotuandui,#santianduo{
+	background-position-x: -238px;
+}
+.dingBtn{
+	height: 36px;
+	width: 313px;
+	line-height: 36px;
+	text-align: center;
+	cursor: pointer;
+	background: #cc141c;
+	color: white;
+	font-size: 14px;
+	float: left;
+	margin-left: 10px;
+}
+.plan_right{
+	height: 242px;
+	float: right;
+	margin-top: 10px;
+	overflow: hidden;
+	position: relative;
+}
+.plan_right .da{
+	width: 110px;
+	height: 140px;
+	float: left;
+	
+}
+.xiao{
+	margin: 30px 35px 0 5px;
+	float: left;
+	
+}
+#gexing{
+	background: url(../images/plan_right_1an.png) no-repeat;
+}
+#gexing:hover{
+	background: url(../images/plan_right_1.png) no-repeat;
+}
+
+#tese{
+	background: url(../images/plan_right_2an.png) no-repeat;
+}
+#tese:hover{
+	background: url(../images/plan_right_2.png) no-repeat;
+}
+
+#ziyou{
+	background: url(../images/plan_right_3an.png) no-repeat;
+}
+#ziyou:hover{
+	background: url(../images/plan_right_3.png) no-repeat;
+}
+
+#wanmei{
+	background: url(../images/plan_right_4an.png) no-repeat;
+}
+#wanmei:hover{
+	background: url(../images/plan_right_4.png) no-repeat;
+}
+
+#dengyu{
+	background: url(../images/equel.png);
+	width: 15px;
+	height: 9px;
+}
+#jia{
+	background: url(../images/plus.png);
+	width: 13px;
+	height: 15px;
+}
+.plan_right h4{
+	font-family: "microsoft yahei";
+  font-size: 20px;
+  margin-top: 90px;
+  margin-left: -30px;
+  color: #3c3c3c;
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.ding{
+	width: 600px;
+	border: 1px solid #12a7ec;
+  border-radius: 6px;
+  height: 102px;
+  margin-right: 30px;
+  position: absolute;
+  left: 0;
+}
+.con{
+	width: 600px;
+	border: 1px solid #12a7ec;
+  border-radius: 6px;
+  height: 102px;
+  margin-right: 30px;
+  position: absolute;
+  left: 0;
+  display: none;
+}
+#gexing .con{
+	display: block;
+}
+.con_top{
+	height: 10px;
+  	margin-top: -10px;
+}
+#yi{
+	background: url(../images/arrow1.png) no-repeat;
+}
+#er{
+	background: url(../images/arrow2.png) no-repeat;
+}
+#san{
+	background: url(../images/arrow3.png) no-repeat;
+}
+#si{
+	background: url(../images/arrow4.png) no-repeat;
+}
+.con p{
+	font-size: 12px;
+	line-height: 20px;
+	margin: 0!important;
+	margin-left: 15px!important;
+}
+.con p:nth-of-type(1){
+	margin-top: 20px!important;
+}
