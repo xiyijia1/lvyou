@@ -1,7 +1,6 @@
 import React from "react"
 import $ from "jquery"
 import {BrowserRouter as Router,Link,Switch,Redirect,Route} from "react-router-dom"
-import url1 from '../images/shanghai.jpg'
 
 
 
@@ -18,7 +17,16 @@ class Target extends React.Component{
 			
 			<div>
 				<h3>目的地</h3>
-				<img  className="pic"  src={url1} />
+				<div className="qyg_left">
+					<h4>旅游热门目的地</h4>
+					<ul>
+						<li>
+							
+						</li>
+					
+					</ul>
+				
+				</div>
 								
 			</div>
 		
