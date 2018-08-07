@@ -3,6 +3,7 @@ import $ from 'jquery'
 import '../css/zhxiangqing.css'
 import {BrowserRouter as Router,Route,Link,Switch,Redirect} from 'react-router-dom';
 import Top from './top'
+import Footer from './footer'
 class Xiangqing extends React.Component {
 	constructor(props){
 		super(props)
@@ -111,7 +112,6 @@ class Xiangqing extends React.Component {
 			
 			$(".zh-list li").click(function(){
 				var index = $(this).index();
-				console.log(index)
 				index = index;
 				$(this).addClass("zh-active2").siblings().removeClass("zh-active2");
 				$("html,body").animate({"scrollTop":$(".zh-move-list").eq(index).offset().top-200},500);
@@ -284,14 +284,7 @@ class Xiangqing extends React.Component {
 								<a href="#">去看看</a>
 							</p>
 						</div>
-						
-						
 					</div>
-					
-					
-					
-					
-					
 				</div>
 			{/* 景区简介end */}
 			
@@ -299,20 +292,8 @@ class Xiangqing extends React.Component {
 			{/* 交通指南start */}
 				<div className="zh-jtzhinan zh-move-list">
 					<h1>交通指南</h1>
-				
-				
 				</div>
-			{/* 交通指南end */}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+		{/* 交通指南end */}
 			{/* 附近特色住宿start */}
 				<div className="zh-tszhusu zh-move-list">
 					<span>附近特色住宿</span>
@@ -536,6 +517,8 @@ class Xiangqing extends React.Component {
 			
 			
 			</div>
+			
+			<Footer />
 		</div>
 		)
 	}
