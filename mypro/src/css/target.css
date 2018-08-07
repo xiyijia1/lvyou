@@ -1,3 +1,162 @@
 *{
 	margin:0;padding:0
 }
+
+/*------------------热门----------------------*/
+
+.remen{
+	width: 1170px;
+	margin: 0 auto;
+	margin-top: 25px;
+	overflow: hidden;
+}
+.remen_left{
+	width: 270px;
+	height: 344px;
+	float: left;
+}
+.remen_left h3{
+	background-color: #fb5002;
+    margin: -1px -1px 0 -1px;
+    line-height: 32px;
+    color: white;
+    text-indent: 10px;
+}
+.remen_left_con{
+	    border: 1px solid #D8D8D8;
+    height: 310px;
+}
+.remen_left_con ul{
+	margin-left: 15px;
+}
+.remen_left_con li{
+	display: inline-block;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D8D8D8;
+    list-style-position: inside;
+    width: 55px;
+    margin-left: 2px;
+}
+
+.remen_left_con li span{
+	display: block;
+	width: 59px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+    vertical-align: middle;
+    cursor: pointer;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
+        line-height: 40px;
+        
+}
+.remen_left_con ul li:hover span{
+	color: #ff8a00;
+}
+.remen_right{
+	width: 850px;
+	height: 350px;
+	border: 1px solid #cecece;
+	float: right;
+	position: relative;
+}
+.remen_right_con{
+	width: 840px;
+	height: 340px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background: url(../images/menpiao1.jpg) no-repeat center/cover;
+}
+.dangji{
+	width: 1170px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.dangji h4{
+	line-height: 40px;
+	font-weight: 400;
+	font-size: 18px;
+}
+.dangji_con{
+	width: 1170px;
+	height: 550px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+}
+.dangji_con_left{
+	width: 755px;
+	height: 550px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+}
+.dangji_con1{
+	width: 370px;
+	height: 265px;
+	background: red;
+	float: left;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+.dangji_con_right{
+	width: 400px;
+	height: 550px;
+	background: red;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+.dangji_tit{
+	position: absolute;
+	width: 100px;
+	height: 40px;
+	background: #383b3f;
+	left: -100px;
+	top: 55px;
+	line-height: 40px;
+	text-align: center;
+	color: white;
+	font-size: 18px;
+}
+.dangjia_footer{
+	position: absolute;
+	width: 100%;
+	height: 44px;
+	background: #383b3f;
+	left: 0;
+	bottom: -44px;
+	line-height: 44px;
+}
+.dangjia_footer span{
+	float: left;
+	font-size: 12px;
+	font-weight: 900;
+	color: white;
+	padding-left: 20px;
+	
+}
+.dangjia_footer em{
+	float: right;
+	color: #bf450e;
+	font-size: 12px;
+	font-style: normal;
+	padding-right: 20px;
+}
