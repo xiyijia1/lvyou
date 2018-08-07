@@ -1,4 +1,5 @@
 import React from 'react'
+import {BrowserRouter as Router,Link,Switch,Redirect,Route} from "react-router-dom"
 import ZyImgqq from '../images/qq.jpg'
 import ZyImgXina from '../images/xina.jpg'
 import ZyImgLogo from '../images/logod.jpg'
@@ -6,20 +7,36 @@ import ZyImgPosition from '../images/position.jpg'
 import ZyImgFuWu from '../images/tel.jpg'
 import '../css/top.css'
 import $ from "jquery"
+//----------------引入redux--------------------
+import Action from '../redux/Action'
+import Store from '../redux/Store'
+
 
 class Top extends React.Component{
 	constructor(props){
 		super(props)
 		this.state={
-			num:true
+			num:true,
+			name:Store.getState()
 		}
+		this.onchange=this.onchange.bind(this);
 	}
+	onchange(){
+		var data=Store.getState();
+		this.setState({arr:data})
+	}
+	componentDidMount(){
+		Store.subscribe(this.onchanges)
+	}
+	
 	tap1(){
-		
+		console.log(this)
 		this.props.history.push("/login")
+		
 		
 	}
 	tap2(){
+		console.log(this)
 		this.props.history.push("/regist")
 	}
 	
@@ -38,8 +55,9 @@ class Top extends React.Component{
 	ZyJS(){
 		$('.Zy_xLli').text($('.ZyXli1').eq(1).text())
 	}
+	
 	render(){
-		var _this=this;
+		var _this = this;
 		return(
 			<div>
 			{/*头部---最上*/}
@@ -47,7 +65,7 @@ class Top extends React.Component{
 					<div className='ZYcontainer'>
 						<ul className='Zy_touUl'>
 							<li className='Zy_TopLi1'>
-								<span>游客:&nbsp;</span>
+								<span>游客:&nbsp;{this.state.name}</span>
 								<span>您好，欢迎来到国内最大个性化旅游定制平台！</span>
 							</li>
 							<li className='Zy_TopLi2'>
@@ -76,14 +94,14 @@ class Top extends React.Component{
 								</div>
 							</li>
 							<li className='Zy_TopLi5 zyt'>
-								<div className='ZyTop5' onClick={this.tap1.bind(this)}>登录</div>
+								<div className='ZyTop5'><Link to="/login">登录</Link></div>
 								<div className='ZyTop51'>
 									<input type='text' id='ZyTopTxT' className='ZyTopTXT' placeholder='请输入邮箱或手机号'/><br/>
 									<input type='password' id='ZyTopTexT' className='ZyTopTXT' placeholder='······'/><br/>
 									<button id='ZyTopBtn'>登录</button>
 								</div>
 							</li>
-							<li className='Zy_TopLi6 zyt' onClick={_this.tap2.bind(_this)}>注册</li>
+							<li className='Zy_TopLi6 zyt'><Link to="/regist">注册</Link></li>
 							<li className='Zy_TopLi7 zyt'>
 								<div className='ZyTop71'>购物车<span>0</span>件</div>
 							</li>
@@ -150,18 +168,18 @@ class Top extends React.Component{
 							<ul className='Zy_luyou'>
 								<li className='Zy_luyou1 Zy_Ly'>图景</li>
 								<li className='Zy_luyou2 Zy_Ly'>旅游攻略</li>
-							</ul>
-							<p></p>						
+							</ul>	
+							<p></p>
 						</li>
 						<li className='Zy_Bli6 BunZ'><a href='/'>手机客户端下载</a></li>
 					</ul>
 					<ul className='Zy_BunUl'>
 						<li className='Zy_BunLi1 ZyBL'>我的旅行</li>
 						<li className='Zy_BunLi2 ZyBL ZyBL1'>						
-						登录
+						<Link to="/login">登录</Link>
 						<span></span>
 						</li>
-						<li className='Zy_BunLi3 ZyBL ZyBL1'>注册</li>
+						<li className='Zy_BunLi3 ZyBL ZyBL1'><Link to="/regist">注册</Link></li>
 					</ul>
 				</div>
 			</div>
