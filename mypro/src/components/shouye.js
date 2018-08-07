@@ -38,9 +38,11 @@ Mock.mock("http://www.jiamenpiao.com",menpiaoJia)
 
 class Shouye extends React.Component {
 	constructor(props) {
-		super(props)
+		super(props)		
 	}
+		
 	componentDidMount(){
+		
 		var flag = false;
 		$(".renshubtn").click(function(){
 			$(this).css({backgroundPositionY:-101+"px"}).siblings().css({backgroundPositionY:0})
@@ -117,6 +119,7 @@ class Shouye extends React.Component {
 //				$(".menpiao_con").html(str1)
 			}
 		});
+		
 	}
 	
 	

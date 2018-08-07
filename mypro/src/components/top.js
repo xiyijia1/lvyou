@@ -25,20 +25,8 @@ class Top extends React.Component{
 		var data=Store.getState();
 		this.setState({arr:data})
 	}
-	componentDidMount(){
-		Store.subscribe(this.onchanges)
-	}
 	
-	tap1(){
-		console.log(this)
-		this.props.history.push("/login")
-		
-		
-	}
-	tap2(){
-		console.log(this)
-		this.props.history.push("/regist")
-	}
+	
 	
 	ZyXl(){
 		if(this.state.num){
@@ -55,6 +43,24 @@ class Top extends React.Component{
 	ZyJS(){
 		$('.Zy_xLli').text($('.ZyXli1').eq(1).text())
 	}
+	
+	
+	shop(){
+
+		
+		if(this.state.name!=""){
+			
+			window.location.href="/gouwuche"
+			
+			
+		}else{
+			
+			window.location.href="/login"
+		}
+		
+	}
+	
+	
 	
 	render(){
 		var _this = this;
@@ -103,7 +109,7 @@ class Top extends React.Component{
 							</li>
 							<li className='Zy_TopLi6 zyt'><Link to="/regist">注册</Link></li>
 							<li className='Zy_TopLi7 zyt'>
-								<div className='ZyTop71'>购物车<span>0</span>件</div>
+								<div className='ZyTop71' onClick={this.shop.bind(this)}>购物车<span>0</span>件</div>
 							</li>
 							<li className='Zy_TopLi8 zyt'>
 								<div className='ZyTop81'>收藏</div>
@@ -160,14 +166,14 @@ class Top extends React.Component{
 				<div className='Zy_Buvn'>
 					<ul>
 						<li className='Zy_Bli1 BunZ'><a href='/'>首页</a></li>
-						<li className='Zy_Bli2 BunZ'><a href='/'>目的地</a></li>
+						<li className='Zy_Bli2 BunZ'><a href='/target'>目的地</a></li>
 						<li className='Zy_Bli3 BunZ'><a href='/'>景区门票</a></li>
 						<li className='Zy_Bli4 BunZ'><a href='/'>旅游视频</a></li>
 						<li className='Zy_Bli5 BunZ'>
-							<a href='/'>旅游百宝箱</a>
+							<a href='/' className="zy_lvb">旅游百宝箱</a>
 							<ul className='Zy_luyou'>
-								<li className='Zy_luyou1 Zy_Ly'>图景</li>
-								<li className='Zy_luyou2 Zy_Ly'>旅游攻略</li>
+								<li className='Zy_luyou1 Zy_Ly'><Link to="/tujinglist">图景</Link></li>
+								<li className='Zy_luyou2 Zy_Ly'><Link to="/gonglue">旅游攻略</Link></li>
 							</ul>	
 							<p></p>
 						</li>
@@ -188,9 +194,9 @@ class Top extends React.Component{
 		)
 	}
 	
-	
-	
 	componentDidMount(){
+				
+		Store.subscribe(this.onchange)
 		
 	}
 	
