@@ -368,6 +368,9 @@ input,a{outline:none;}
 .Zy_Bli5{
 	position: relative;
 }
+.Zy_Bli5 a{
+	float: left;
+}
 .Zy_luyou{
 	position: absolute;
 	top:31px;
@@ -392,9 +395,11 @@ input,a{outline:none;}
 	border-bottom: 2px solid #fff;
 }
 .Zy_Bli5 p{
+	float:left;
 	display: inline-block;
 	border:5px solid #222222;
 	border-top-color: #222222;
+	margin-top: 6px;
 }
 
 .Zy_Bli5:hover p{
