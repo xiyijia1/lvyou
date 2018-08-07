@@ -5,10 +5,39 @@ import '../css/login.css';
 import Top from "./top"
 import qurl4 from "../images/tu.png"
 import qurl5 from "../images/aa_r1_c7_s1.jpg"
+//----------------引入redux--------------------
+import Action from '../redux/Action'
+import Store from '../redux/Store'
 
 class Login extends React.Component{
 	constructor(props){
-		super(props)
+		super(props)	
+	}
+	
+	save(){
+		
+	    Store.dispatch(Action(this.refs.ipt.value)) 	
+	}
+
+
+	send(){
+		var _this =this;
+		$.ajax({
+			type:"post",
+			url:"http://127.0.0.1:8000/login",
+			data:{phoneNum:$(".qyg_bac1").val(),psw:$(".qyg_bac2").val()},
+			success:function(data){
+				if(data==1){
+					alert("登陆成功")
+					_this.save();	
+					_this.props.history.push("/shouye")
+					    
+				}else{
+					alert("账号密码不正确")
+				}
+			}
+		});
+		
 	}
 	render(){
 		return(
@@ -21,12 +50,12 @@ class Login extends React.Component{
 						<div className='qyg_leftl'>
 							<p className="qyg_in">
 								<label className="qyg_ym">用户名:</label>
-								<input type = 'text' placeholder="会员/邮箱" className="qyg_bac1"/>
+								<input type = 'text' placeholder="会员/邮箱" className="qyg_bac1" ref="ipt"/>
 								
 							</p>
 							<p className="qyg_in">
 								<label className="qyg_ym">密  &nbsp;&nbsp;码:</label>
-								<input type = 'text'  className="qyg_bac2"/>
+								<input type = 'password'  className="qyg_bac2"/>
 								
 							</p>
 							<div className="qyg_aside">
@@ -38,7 +67,7 @@ class Login extends React.Component{
 							</div>
 							
 							<div className="qyg_login">
-								<button>登录</button>
+								<button onClick={this.send.bind(this)}>登录</button>
 							</div>
 							<div className="qyg_link">
 								<p>使用其他账号登录:</p>

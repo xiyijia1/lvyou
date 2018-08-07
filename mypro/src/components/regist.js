@@ -92,7 +92,7 @@ class Regist extends React.Component{
 							</p>
 							<p>
 								<label className="qyg_ps">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;昵称:</label>
-								<input type="password" placeholder="昵称" className="qyg_inp"/>
+								<input type="text" placeholder="昵称" className="qyg_inp"/>
 							
 							</p>
 							<p>
