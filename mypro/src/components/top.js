@@ -17,13 +17,14 @@ class Top extends React.Component{
 		super(props)
 		this.state={
 			num:true,
-			name:Store.getState()
+			name:Store.getState().name,
+			address:Store.getState().address,
 		}
 		this.onchange=this.onchange.bind(this);
 	}
 	onchange(){
 		var data=Store.getState();
-		this.setState({arr:data})
+		this.setState({name:data.name,address:data.address})
 	}
 	
 	
@@ -132,7 +133,7 @@ class Top extends React.Component{
 					<div className='Zy_TopDw'>
 						<div className='Zy_TopDw1'>
 							<img src={ZyImgPosition}/>
-							<a href='/'>成都</a>							
+							<a href='/'>{this.state.address}</a>							
 						</div>
 					</div>
 					{/*搜索*/}
@@ -195,7 +196,7 @@ class Top extends React.Component{
 	}
 	
 	componentDidMount(){
-				
+		
 		Store.subscribe(this.onchange)
 		
 	}

@@ -2,7 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link, Redirect, Switch } from 'react-router-dom'
 import $ from "jquery";
 
-
+import ActionDizhi from '../redux/ActionDizhi'
+import Store from '../redux/Store'
 
 
 import "../css/shouye.css"
@@ -121,7 +122,9 @@ class Shouye extends React.Component {
 		});
 		
 	}
-	
+	tap(){
+		Store.dispatch(ActionDizhi(this.refs.didianJia.value))
+	}
 	
 	
 	render() {
@@ -140,7 +143,7 @@ class Shouye extends React.Component {
 						<h3>开始定制你的个性化旅游</h3>
 						<div className="form_grop">
 							<label htmlFor="didian">目的地</label>
-							<input type="text" id="didian" placeholder="请选择或输入旅行地点或景点" />
+							<input type="text" id="didian" placeholder="请选择或输入旅行地点或景点" ref="didianJia"/>
 							<div className="didianList">
 								<div className="close">×</div>
 								<ul className="didianUl">
@@ -169,7 +172,7 @@ class Shouye extends React.Component {
 						</div>
 						<div className="form_grop">
 							<label></label>
-							<div className="dingBtn">
+							<div className="dingBtn" onClick={this.tap.bind(this)}>
 								开始定制
 							</div>
 						</div>

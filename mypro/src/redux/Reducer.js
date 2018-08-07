@@ -2,12 +2,17 @@
 var Reducer=function(state,action){
 	
 	if(typeof state==='undefined'){
-		return ""
+		return {}
 	}
 	
 	switch (action.type){
 		case 'ADD_TODO':
-			return action.text
+			state.name = action.text
+			return state
+			break;
+		case 'DIZHI_TODO':
+			state.address = action.text
+			return state
 			break;
 		default:
 			return state;
