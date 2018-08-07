@@ -7,6 +7,8 @@ import Shouye from "./components/shouye"
 import Target from "./components/target"
 import Tujinglist from "./components/tujinglist"
 import Gouwuche from "./components/gouwuche"
+import Xiangqinglist from "./components/xiangqinglist"
+
 class App extends Component {
   render() {
     return (
@@ -20,6 +22,8 @@ class App extends Component {
         				<Route path="/target" component={Target}></Route>
         				<Route path="/tujinglist" component={Tujinglist}></Route>
         				<Route path="/gouwuche" component={Gouwuche}></Route>
+        				<Route path="/xiangqinglist" component={Xiangqinglist}></Route>
+        				
         				<Redirect to="/shouye" />
         			</Switch>
         		</div>
