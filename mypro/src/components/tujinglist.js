@@ -2,6 +2,7 @@ import React from 'react'
 import {BrowserRouter as Router,Link,Switch,Redirect,Route} from "react-router-dom";
 import $ from 'jquery';
 import '../css/tujing.css';
+import Top from './top';
 class Tujing extends React.Component {
     constructor(props){
         super(props)
@@ -205,6 +206,7 @@ class Tujing extends React.Component {
     render(){
         return(
             <div>
+            	<Top />
                 <div id="zh-con">
                 {/* 头部开始 */}
                     <div className="zh-top">
