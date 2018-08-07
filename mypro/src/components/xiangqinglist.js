@@ -102,8 +102,7 @@ class Xiangqing extends React.Component {
 				$(".zh-move-list").each(function(){
 					if(scrollTop >= $(this).offset().top - 300){
 							var index = $(this).index();
-							console.log(index)
-							index = index - 3;
+							index = index - 2;
 							$(".zh-list li").eq(index).addClass("zh-active2").siblings().removeClass("zh-active2");
 					}
 				})
