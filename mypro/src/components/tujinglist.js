@@ -3,7 +3,6 @@ import {BrowserRouter as Router,Link,Switch,Redirect,Route} from "react-router-d
 import $ from 'jquery';
 import '../css/tujing.css';
 import Top from './top';
-import Booter from './footer'
 class Tujing extends React.Component {
     constructor(props){
         super(props)
@@ -326,7 +325,6 @@ class Tujing extends React.Component {
 				{/* 下部分end */}
 
                 </div>
-           	<Booter />
             </div>
         )
    } 

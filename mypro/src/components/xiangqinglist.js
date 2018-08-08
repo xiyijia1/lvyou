@@ -3,7 +3,6 @@ import $ from 'jquery'
 import '../css/zhxiangqing.css'
 import {BrowserRouter as Router,Route,Link,Switch,Redirect} from 'react-router-dom';
 import Top from './top'
-import Footer from './footer'
 class Xiangqing extends React.Component {
 	constructor(props){
 		super(props)
@@ -517,8 +516,6 @@ class Xiangqing extends React.Component {
 			
 			
 			</div>
-			
-			<Footer />
 		</div>
 		)
 	}

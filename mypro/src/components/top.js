@@ -49,14 +49,11 @@ class Top extends React.Component{
 	shop(){
 
 		
-		if(this.state.name!=""){
+		if(this.state.name == undefined){
 			
-			window.location.href="/gouwuche"
-			
-			
+			window.location.href="/login"	
 		}else{
-			
-			window.location.href="/login"
+			window.location.href="/gouwuche"
 		}
 		
 	}

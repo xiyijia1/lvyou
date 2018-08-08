@@ -7,7 +7,7 @@ import Store from '../redux/Store'
 
 
 import Top from "./top";
-import Footer from "./footer";
+
 import "../css/target.css"
 
 import tuijian1 from '../images/tuijian1.jpg'
@@ -150,7 +150,7 @@ class Target extends React.Component{
 						
 					</div>
 				</div>
-				<Footer/>
+
 			</div>
 			
 		)
