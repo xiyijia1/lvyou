@@ -2,7 +2,12 @@ import React from "react"
 import $ from "jquery"
 import {BrowserRouter as Router,Link,Switch,Redirect,Route} from "react-router-dom"
 
+import ActionDizhi from '../redux/ActionDizhi'
+import Store from '../redux/Store'
+
+
 import Top from "./top";
+import Footer from "./footer";
 import "../css/target.css"
 
 import tuijian1 from '../images/tuijian1.jpg'
@@ -43,12 +48,17 @@ class Target extends React.Component{
 					}else{
 						var a = data.user[i].address
 					}
-					str+=`<li>
+					str+=`<li class="target_didian"> 
 									<span>${a}</span>
 								</li>`
 				}
 				
 				$(".remen_left_conul").html(str)
+				$(".target_didian").click(function(){
+					var str = $(this).text()
+					Store.dispatch(ActionDizhi(str))
+				})
+				
 			}
 		});
 		
@@ -140,8 +150,9 @@ class Target extends React.Component{
 						
 					</div>
 				</div>
+				<Footer/>
 			</div>
-		
+			
 		)
 	}
 

@@ -2,7 +2,7 @@
 var Reducer=function(state,action){
 	
 	if(typeof state==='undefined'){
-		return {}
+		return {address:"选择目的地"}
 	}
 	
 	switch (action.type){
