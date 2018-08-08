@@ -73,10 +73,6 @@ class Shouye extends React.Component {
 			}
 			
 		})
-		$(".menpiao_con").children("dl").click(function(){
-			var str=$(this).children("dd").children("h5").text();
-			window.location.href = "/xiangqinglist/"+str
-		})
 		$(".close").click(function(){
 			$(".didianList").hide()
 		})
@@ -131,7 +127,22 @@ class Shouye extends React.Component {
 		Store.dispatch(ActionDizhi(this.refs.didianJia.value))
 		this.props.history.push("/jingqu1/"+str)
 	}
-	
+	go1(){
+		var str = $(".goTit1").text();
+		this.props.history.push("/xiangqinglist/"+str)
+	}
+	go2(){
+		var str = $(".goTit2").text();
+		this.props.history.push("/xiangqinglist/"+str)
+	}
+	go3(){
+		var str = $(".goTit3").text();
+		this.props.history.push("/xiangqinglist/"+str)
+	}
+	go4(){
+		var str = $(".goTit4").text();
+		this.props.history.push("/xiangqinglist/"+str)
+	}
 	
 	render() {
 		return(
@@ -251,10 +262,10 @@ class Shouye extends React.Component {
 						</div>
 					</div>
 					<div className="menpiao_con">
-						<dl>
+						<dl onClick={this.go1.bind(this)}>
 							<dt><img src={menpiao1}/></dt>
 							<dd>
-								<h5>郑州绿博园</h5>
+								<h5 className="goTit1">郑州绿博园</h5>
 								<p>
 									<span>￥26</span>
 									<em>起</em>
@@ -262,10 +273,10 @@ class Shouye extends React.Component {
 								</p>
 							</dd>
 						</dl>
-						<dl>
+						<dl onClick={this.go2.bind(this)}>
 							<dt><img src={menpiao2}/></dt>
 							<dd>
-								<h5>郑州江南春温泉</h5>
+								<h5 className="goTit2">郑州江南春温泉</h5>
 								<p>
 									<span>￥108</span>
 									<em>起</em>
@@ -273,10 +284,10 @@ class Shouye extends React.Component {
 								</p>
 							</dd>
 						</dl>
-						<dl>
+						<dl onClick={this.go3.bind(this)}>
 							<dt><img src={menpiao3}/></dt>
 							<dd>
-								<h5>栾川鸡冠洞景区</h5>
+								<h5 className="goTit3">栾川鸡冠洞景区</h5>
 								<p>
 									<span>￥63</span>
 									<em>起</em>
@@ -284,10 +295,10 @@ class Shouye extends React.Component {
 								</p>
 							</dd>
 						</dl>
-						<dl>
+						<dl onClick={this.go4.bind(this)}>
 							<dt><img src={menpiao4}/></dt>
 							<dd>
-								<h5>郑州方特欢乐世界</h5>
+								<h5 className="goTit4">郑州方特欢乐世界</h5>
 								<p>
 									<span>￥40</span>
 									<em>起</em>
