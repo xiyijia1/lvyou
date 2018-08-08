@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import "./css/footer.css"
 import {Link,BrowserRouter as Router,Route,Redirect,Switch} from "react-router-dom"
 import Regist from "./components/regist"
 import Login from "./components/login"
@@ -12,6 +13,7 @@ import Xiangqinglist from "./components/xiangqinglist"
 import Jingqu1 from "./components/jingqu1"
 import Jingqu2 from "./components/jingqu2"
 import Gonglue from "./components/gonglue"
+import Footer from "./components/footer"
 
 class App extends Component {
   render() {
@@ -39,6 +41,8 @@ class App extends Component {
         		</div>
         		
         	</Router>
+        	
+        	<Footer />
       </div>
     );
   }
