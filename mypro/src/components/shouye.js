@@ -73,7 +73,10 @@ class Shouye extends React.Component {
 			}
 			
 		})
-		
+		$(".menpiao_con").children("dl").click(function(){
+			var str=$(this).children("dd").children("h5").text();
+			window.location.href = "/xiangqinglist/"+str
+		})
 		$(".close").click(function(){
 			$(".didianList").hide()
 		})
