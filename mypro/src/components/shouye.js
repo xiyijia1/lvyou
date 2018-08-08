@@ -9,7 +9,6 @@ import Store from '../redux/Store'
 import "../css/shouye.css"
 import 'antd/dist/antd.css';
 import Top from "./top";
-import Footer from "./footer";
 
 import { Carousel } from 'antd';
 import banner1 from '../images/banner1.jpg'
@@ -310,9 +309,7 @@ class Shouye extends React.Component {
 						<img src={fuwu4}/>
 					</div>
 				</div>
-				
-				{/*---------服务结束-----------*/}
-				<Footer/>
+	
 			</div>
 		)
 	}
