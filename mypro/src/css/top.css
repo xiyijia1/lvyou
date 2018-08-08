@@ -149,6 +149,10 @@ input,a{outline:none;}
 	background: url(../images/bj.png) no-repeat top center/cover #475207;
 	background-position-y: -400px;
 }
+
+
+
+
 .Zy_TopLi5:hover .ZyTop51{
 	display: block;
 }
@@ -450,4 +454,13 @@ input,a{outline:none;}
 }
 .Zy_BunUl:hover .ZyBL1{
 	display: block;
+}
+/*link标签*/
+
+.ZyLi{
+	width:150px;
+	height:39px;
+	text-align: center;
+	line-height: 40px;
+	float:left;
 }

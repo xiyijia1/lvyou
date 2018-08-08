@@ -3,6 +3,7 @@ import $ from 'jquery'
 import '../css/zhxiangqing.css'
 import {BrowserRouter as Router,Route,Link,Switch,Redirect} from 'react-router-dom';
 import Top from './top'
+import Footer from './footer'
 import Mock from 'mockjs';
 import XiangQing from '../data/xiangqingList';
 Mock.mock("http://www.xiangqingList.com",XiangQing);
@@ -454,6 +455,7 @@ class Xiangqing extends React.Component {
 			
 			
 			</div>
+			<Footer />
 		</div>
 		)
 	}
