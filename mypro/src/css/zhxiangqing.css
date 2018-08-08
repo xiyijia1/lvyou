@@ -30,12 +30,15 @@ li{
 .zh-x-right{
 	width: 470px;
 	float: left;
-	padding-top: 40px;
+	padding-top: 35px;
 	padding-left: 10px;
 }
 .zh-x-right>h2{
 	color: #5F5F5F;
 	font-weight: 100;
+	font-size: 30px;
+	margin: 0;
+	
 }
 .zh-x-right .zh-price>span{
 	font-size: 28px;
@@ -43,7 +46,10 @@ li{
 	padding-right: 25px;
 }
 .zh-x-right .zh-price>span>span:nth-child(1){
-	font-size: 16px;
+	font-size: 14px;
+}
+.zh-x-right .zh-price>span>span:nth-child(2){
+	font-size: 28px;
 }
 .zh-x-right .zh-price>em{
 	font-style: normal;

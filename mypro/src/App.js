@@ -34,7 +34,7 @@ class App extends Component {
         				
         				<Route path="/tujinglist" component={Tujinglist}></Route>
         				<Route path="/gouwuche" component={Gouwuche}></Route>
-        				<Route path="/xiangqinglist" component={Xiangqinglist}></Route>
+        				<Route path="/xiangqinglist/:id" component={Xiangqinglist}></Route>
         				
         				<Redirect to="/shouye" />
         			</Switch>

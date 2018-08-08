@@ -3,90 +3,43 @@ import $ from 'jquery'
 import '../css/zhxiangqing.css'
 import {BrowserRouter as Router,Route,Link,Switch,Redirect} from 'react-router-dom';
 import Top from './top'
+import Mock from 'mockjs';
+import XiangQing from '../data/xiangqingList';
+Mock.mock("http://www.xiangqingList.com",XiangQing);
 class Xiangqing extends React.Component {
 	constructor(props){
 		super(props)
 		this.state = {
-			arr:[{
-				  "city":"郑州绿博园",
-				  "url":"http://www.517dv.com/upload/2015/09/09/235efca33ce4d55d4509dd1c9726798f.jpg",
-				  "price":"26",
-				  "pingfen":"4.7分",
-				  "address":"河南省郑州市郑开大道与人文路交汇向南2000米",
-				  "tit":"景区入园门票一张。观光小火车、自行车、游船、观光塔、餐饮等需另外收费",
-				  "shprice":"￥30",
-				  "url1":"http://www.517dv.com/new/images/index/logo.jpg",
-				  "tit1":"郑州绿博园是一座国内一流的大型生态主题公园；是一处汇聚了国内不同地域民俗民风和历史文化内涵的生态文化园林；是集海内外低碳及绿化 新科学、新技术、新品种于一体的生态建设成果展示 基地，郑州•中国绿化博览园如一座绿色丰碑，记载着生 态文明建设的辉煌业绩而镌刻于史册。中环是各类展园，系绿博园的精华荟萃带。外环为整个园区的背景森林带。",
-				  "url2":"http://www.517dv.com/upload/2015/09/09/1441779073128360.jpg",
-				  "url3":"http://www.517dv.com/upload/2015/09/09/1441779092527786.jpg",
-				  "url4":"http://www.517dv.com/upload/2015/09/09/1441779106919179.jpg",
-				  "url5":"http://www.517dv.com/upload/2015/09/09/1441779119517822.jpg",
-				  "url6":"http://www.517dv.com/upload/2015/09/09/1441779130812418.jpg",
-				  "url7":"http://www.517dv.com/upload/2015/09/09/1441779184442389.jpg"
-				},{
-				  "city":"郑州江南春温泉",
-				  "url":"http://www.517dv.com/upload/2015/09/09/80dbcdfc3564384ccc09abf29b2b9a63.jpg",
-				  "price":"130",
-				  "pingfen":"4.2分",
-				  "address":"河南省郑州市荥阳市近郊江山路与北四环交叉口向西七公里",
-				  "tit":"石板浴、海盐浴、沙滩排球、四季恒温游泳池、大型海啸温泉造浪。",
-				  "shprice":"￥168",
-				  "url1":"http://www.517dv.com/new/images/index/logo.jpg",
-				  "tit1":" 气候渐冷，去泡温泉是最佳挑选。温泉的热影响使人肌肉、关节放松，扩大血管，推进血液循环，到达消除疲惫，加快人体推陈出新的效果。特别的，泉流中所含的丰厚矿物质，有软化角质、美白肌肤等多种效果，放松身心的一起还有保健收成，可谓一举多得。在现代医学看来，温泉的保健效果是通过热影响和其间所含的丰厚化学物质来完成的。热影响和泡热水澡的道理是相通的，温泉能“治百病”的隐秘正在于其间所含的丰厚矿物质。依据其所含矿物质的差异，对人体的保健效果也大不相同。",
-				  "url2":"http://www.517dv.com/upload/2015/09/09/1441770614543158.jpg",
-				  "url3":"http://www.517dv.com/upload/2015/09/09/1441776755136622.jpg",
-				  "url4":"http://www.517dv.com/upload/2015/09/09/1441777199485430.jpg",
-				  "url5":"http://www.517dv.com/upload/2015/09/09/1441777351819521.jpg",
-				  "url6":"http://www.517dv.com/upload/2015/09/09/1441777466179294.jpg",
-				  "url7":"http://www.517dv.com/upload/2015/09/09/1441777803256441.jpg"
-				},{
-				  "city":"郑州香缇湾温泉",
-				  "url":"http://www.517dv.com/upload/2015/09/09/d8436a4dbac9015f10740d375e498272.jpg",
-				  "price":"120",
-				  "pingfen":"4.2分",
-				  "address":"郑州市中原西路商隐路交叉口向北300米路东",
-				  "tit":"包括室内外温泉、休息大厅、乒乓球、台球、健身房、网吧、时令水果等。晚上12点以后休息大厅需另行收取38元",
-				  "shprice":"￥168",
-				  "url1":"http://www.517dv.com/new/images/index/logo.jpg",
-				  "tit1":"香堤湾温泉是集温泉养生、休闲度假、商务会议、住宿、餐饮、娱乐等多种功能为一体的大型游闲项目,温泉的温泉水为饮浴双用的纯天然高温矿泉水，富含多种有益于人体健康的矿物质和微量元,不同的温泉池课大道不同的效果。",
-				  "url2":"http://www.517dv.com/upload/2015/09/09/1441781594818590.jpg",
-				  "url3":"http://www.517dv.com/upload/2015/09/09/1441781607534806.jpg",
-				  "url4":"http://www.517dv.com/upload/2015/09/09/1441781617425892.jpg",
-				  "url5":"http://www.517dv.com/upload/2015/09/09/1441781632162954.jpg",
-				  "url6":"http://www.517dv.com/upload/2015/09/09/1441781644105350.jpg",
-				  "url7":"http://www.517dv.com/upload/2015/09/09/1441781665127794.jpg"
-				},{
-				  "city":"郑州方特欢乐世界",
-				  "url":"http://www.517dv.com/upload/2015/09/09/8f84b78b79df4f3fa8ebedc5759e7394.jpg",
-				  "price":"210",
-				  "pingfen":"4.7分",
-				  "address":"郑开大道与人文路交叉口向南(绿博园北门正对面)",
-				  "tit":"郑州方特欢乐世界门票一张,往返直通车车费，导服",
-				  "shprice":"￥220",
-				  "url1":"http://www.517dv.com/new/images/index/logo.jpg",
-				  "tit1":"公园建在郑开大道与人文路交叉口向南，绿博园正对面。公园的内容涵盖现代科技、科学幻想、神话传说、历史文化、主题表演等多个方面，形式新颖、内容丰富，适合不同年龄层游客的需要。项目惊险刺激、富有文化内涵，参与性、体验性强。公园设计年游客接待能力为250万人次",
-				  "url2":"http://www.517dv.com/upload/2015/09/09/1441759074923784.jpg",
-				  "url3":"http://www.517dv.com/upload/2015/09/09/1441759189135852.jpg",
-				  "url4":"http://www.517dv.com/upload/2015/09/09/1441759291526624.jpg",
-				  "url5":"http://www.517dv.com/upload/2015/09/09/1441760162686646.jpg",
-				  "url6":"http://www.517dv.com/upload/2015/09/09/1441759764390002.jpg",
-				  "url7":"http://www.517dv.com/upload/2015/09/09/1441760376313668.jpg"
-				}],
-			obj:""
+				city:"",
+				address:"",
+				price:"",
+				tit:"",
+				pingfen:""
+				}
 		}
-	}
 	
 	
 	componentWillMount(){
+		var _this = this
+		var str = this.props.match.params.id;
+//		var str = "南京"
+		this.setState({city:str})
 		
-		var arr1 = this.state.arr;
-		var str = "郑州方特欢乐世界";
-		console.log(str == arr1[0].city)
-		for(var i = 0; i < arr1.length ; i++){
-			if(arr1[i].city == str){
-				this.setState({obj:arr1[i]})
+
+		
+		$.ajax({
+			type:"get",
+			url:"http://www.xiangqingList.com",
+			dataType:"json",
+			success:function(data){
+				console.log(data)
+				_this.setState({address:data.list.address})
+				_this.setState({price:data.list.price})
+				_this.setState({tit:data.list.text})
+				_this.setState({pingfen:data.list.pingfen})
 			}
-		}
+		});
+	
 	}	
 	
 	componentDidMount(){
@@ -116,24 +69,9 @@ class Xiangqing extends React.Component {
 				$("html,body").animate({"scrollTop":$(".zh-move-list").eq(index).offset().top-200},500);
 				
 			})
-			
-			
-			
-			
 		})()
-		
-		
-		
-		
 	}
-	
-	
-	
-	
-	
-	
 	render(){
-		console.log(this.state.obj)
 		return(
 			<div>
 			<Top />
@@ -142,21 +80,21 @@ class Xiangqing extends React.Component {
 			{/* topstart */}
 				<div id="zh-xq-top">
 					<div className = "zh-x-left">
-						<img src={this.state.obj.url} />
+						<img src="http://www.517dv.com/upload/2015/09/09/8f84b78b79df4f3fa8ebedc5759e7394.jpg" />
 					</div>
 					<div className = "zh-x-right">
-						<h2>{this.state.obj.city}</h2>
+						<h2>{this.state.city}</h2>
 						<div className="zh-price">
 							<span>
 								<span>￥</span>
-								<span>{this.state.obj.price}</span>
+								<span>{this.state.price}</span>
 							</span>
 							<em>全网最低价</em>
 						</div>
-						<p>{this.state.obj.pingfen}</p>
+						<p>{this.state.pingfen}分</p>
 						<p>
 							<span>景点地址:</span>
-							<span>{this.state.obj.address}</span>	
+							<span>{this.state.address}</span>	
 						</p>
 						<p>
 							<span>游玩时间:</span>
@@ -192,13 +130,13 @@ class Xiangqing extends React.Component {
 					<span>优惠价</span>	
 				</div>
 				<div className="zh-tab-bottom">
-					<img src={this.state.obj.url1} />		
-					<a href = "#">{this.state.obj.city}</a>
-					<p>{this.state.obj.tit}</p>
-					<p>{this.state.obj.shprice}</p>
+					<img src="http://www.517dv.com/new/images/index/logo.jpg" />		
+					<a href = "#">{this.state.city}</a>
+					<p>{this.state.tit}</p>
+					<p>{this.state.price}</p>
 					<p>
 						<span>￥</span>
-						<span>{this.state.obj.price}</span>
+						<span>{this.state.price}</span>
 						<span className="btn">加入购物车</span>
 						<button className="btn1">购买</button>
 					</p>
@@ -220,13 +158,13 @@ class Xiangqing extends React.Component {
 							<p>入园凭证：预定成功手机短信为主</p>
 							<p>免票人群：儿童身高1.4米(不含1.4米)以下免票；现役军人、革命伤残军人、70岁（不含）以上的老人等持有效证件免票。残疾人持残疾证件免票。</p>
 							<p>优惠人群：60-69岁的老人持有效证件购票享受半票；1.4米以上的在校全日制学生凭本人学生证购票享受半票。</p>
-							<em>{this.state.obj.tit1}</em>
-							<img src={this.state.obj.url2}/>
-							<img src={this.state.obj.url3}/>
-							<img src={this.state.obj.url4}/>
-							<img src={this.state.obj.url5}/>
-							<img src={this.state.obj.url6}/>
-							<img src={this.state.obj.url7}/>
+							<em>{this.state.tit}</em>
+							<img src="http://www.517dv.com/upload/2015/09/09/1441759074923784.jpg"/>
+							<img src="http://www.517dv.com/upload/2015/09/09/1441760376313668.jpg"/>
+							<img src="http://www.517dv.com/upload/2015/09/09/1441759764390002.jpg"/>
+							<img src="http://www.517dv.com/upload/2015/09/09/1441760162686646.jpg"/>
+							<img src="http://www.517dv.com/upload/2015/09/09/1441760162686646.jpg"/>
+							<img src="http://www.517dv.com/upload/2015/09/09/1441759189135852.jpg"/>
 						</div>
 					</div>
 					<div className="zh-jq-right">
