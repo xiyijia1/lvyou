@@ -9,6 +9,10 @@ import Tujinglist from "./components/tujinglist"
 import Gouwuche from "./components/gouwuche"
 import Xiangqinglist from "./components/xiangqinglist"
 
+import Jingqu1 from "./components/jingqu1"
+import Jingqu2 from "./components/jingqu2"
+import Gonglue from "./components/gonglue"
+
 class App extends Component {
   render() {
     return (
@@ -20,6 +24,12 @@ class App extends Component {
         				<Route path="/login" component={Login}></Route>
         				<Route path="/shouye" component={Shouye}></Route>
         				<Route path="/target" component={Target}></Route>
+        				<Route path="/jingqu1" component={Jingqu1}></Route>
+        				
+        				<Route path="/jingqu2" component={Jingqu2}></Route>
+        				<Route path="/gonglue" component={Gonglue}></Route>
+        				
+        				
         				<Route path="/tujinglist" component={Tujinglist}></Route>
         				<Route path="/gouwuche" component={Gouwuche}></Route>
         				<Route path="/xiangqinglist" component={Xiangqinglist}></Route>

@@ -1,0 +1,301 @@
+@import '~antd/dist/antd.css';
+
+*{margin: 0;padding: 0;font-size: 12px;}
+li{
+	list-style: none;
+}
+
+#jingqu{
+	margin-top: 20px;
+	width: 100%;
+}
+
+#jingqu .zhutu{
+	width: 1170px;
+	margin: 0 auto;
+}
+
+#jingqu .hjc_qingqu_nav{
+	width: 1170px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+#jingqu .hjc_qingqu_nav .jingqu_tab{
+	overflow: hidden;
+	border:1px solid #ddd;
+	border-top: none;
+	border-right: 0;
+	width: 571px;
+	height: 51px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0;
+}
+#jingqu .hjc_qingqu_nav .jingqu_tab li{
+	text-align: center;
+	line-height: 51px;
+	flex: 1;
+	border-top: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+#jingqu .hjc_qingqu_nav .jingqu_tab li:hover{
+	background-color: #e7e3e3;
+}
+#jingqu .hjc_qingqu_nav .jingqu_tab li.active{
+	color: red;
+	border-top:2px solid #fa4f01;
+}
+
+/*景区条件选择*/
+#jingqu .jingqu_contation{
+	display: flex;
+	height: 32px;
+	background-color: #f6f6f6;
+	border: 1px solid #ddd;
+}
+#jingqu .jingqu_contation span{
+	text-align: center;
+	line-height: 32px;
+}
+#jingqu .jingqu_contation .span_btn{
+	padding: 0 16px;
+	border: 1px solid #ddd;
+}
+#jingqu .jingqu_contation .span_contation{
+	flex: 1;
+	text-align: left;
+	text-indent: 20px;
+}
+
+/*景点列表*/
+#jingqu .hjc_qingqu_section{
+	width: 1170px;
+	margin: 0 auto;
+	padding: 32px 0 0 0;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+}
+#jingqu .hjc_qingqu_section .jingdians{
+	width:860px;
+}
+
+#jingqu .hjc_qingqu_section .jingdians img{
+	width: 213px;
+	height: 132px;
+}
+
+#jingqu .hjc_qingqu_section .jingdians .jingdian{
+	width:860px;
+	padding: 0 23px;
+	height: 180px;
+	border: 1px solid #ddd;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+#jingqu .jingdian .mid{
+	height: 132px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding-left: 23px;
+}
+#jingqu .jingdian .mid p:nth-of-type(1){
+	font-size: 16px;
+	font-weight: bold;
+}
+#jingqu .jingdian .mid p:nth-of-type(2){
+	font-size: 12px;
+	color: #999;
+}
+#jingqu .jingdian .mid p:nth-of-type(3){
+	font-size: 12px;
+	font-weight: bold;
+}
+#jingqu .jingdian .mid p:nth-of-type(3) span{
+	margin-right: 6px;
+}
+#jingqu .jingdian .mid p:nth-of-type(4){
+	font-size: 12px;
+}
+
+#jingqu .jingdian .right{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 112px;
+	width: 70px;
+}
+
+#jingqu .jingdian .right span{
+	text-align: right;
+	color: #ff7000;
+}
+
+#jingqu .jingdian .right span:nth-of-type(1){
+	font-size: 9px;
+}
+#jingqu .jingdian .right span:nth-of-type(1) strong{
+	font-size: 20px;
+}
+
+#jingqu .jingdian .right button{
+	background: #ff7000;
+	color: white;
+	border: 0;
+	outline: none;
+	height: 30px;
+	width: 70px;
+	font-size: 12px;
+}
+
+#jingqu .jingdian .jingdian_fuhao{
+	position: absolute;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background-color: #c1c1c1;
+	right: 20px;
+	top: -12px;
+}
+#jingqu .jingdian .jingdian_fuhao span{
+	display: block;
+	width: 23px;
+	height: 6px;
+	background-color: white;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+}
+
+/*精选部分*/
+#jingqu .jjingdians{
+	width: 268px;
+	border: 1px solid #ddd;
+}
+#jingqu .jjingdians>h3{
+	line-height: 40px;
+	background-color: #f6f6f6;
+	font-size: 12px;
+	text-indent: 10px;
+}
+
+#jingqu .jjingdians .jjingdian{
+	display: flex;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+#jingqu .jjingdians .jjingdian img{
+	width: 90px;
+	height: 74px;
+	margin-right: 10px;
+}
+#jingqu .jjingdians .jjingdian>div{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+#jingqu .jjingdians .jjingdian>div p{
+	margin-bottom: 0;
+	font-weight: bold;
+}
+#jingqu .jjingdians .jjingdian>div span:nth-of-type(1){
+	color: #ff7000;
+}
+#jingqu .jjingdians .jjingdian>div span:nth-of-type(2){
+	text-decoration: line-through;
+}
+
+/*酒店*/
+#jingqu .hjc_jiudian{
+	position: relative;
+	display: flex;
+	padding: 24px 110px 0px 14px;
+	width: 558px;
+	justify-content: space-between;
+	border: 1px solid #ddd;
+	box-shadow: 5px 5px 10px 1px rgb(215,215,215);
+	margin-bottom: 20px;
+}
+#jingqu .hjc_jiudian>span{
+	font-size: 24px;
+	font-weight: bold;
+	margin-top: 35px;
+}
+
+#jingqu .hjc_jiudian>div{
+	display: flex;
+	flex-direction: column;
+	width: 134px;
+}
+#jingqu .hjc_jiudian .left img,#jingqu .hjc_jiudian .mid img{
+	cursor:pointer;
+}
+
+#jingqu .hjc_jiudian .left .jiudian_title,#jingqu .hjc_jiudian .mid .jiudian_title{
+	display: block;
+	width: 134px;
+	height: 24px;
+	position: absolute;
+	top: 24px;
+	font-size: 12px;
+	text-indent: 12px;
+	line-height: 24px;
+	color: #91cfdb;
+	background-color: rgba(114,114,114,.6);
+}
+#jingqu .hjc_jiudian .mid .jiudian_title{
+	color: white;
+}
+#jingqu .hjc_jiudian .left a,#jingqu .hjc_jiudian .mid a{
+	margin-top: 6px;
+	color: #666;
+}
+#jingqu .hjc_jiudian .mid select{
+	margin-bottom: 10px;
+}
+#jingqu .hjc_jiudian .right{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 30px;
+	width: 90px;
+	text-align: center;
+}
+#jingqu .hjc_jiudian .right>span{
+	margin-bottom: 10px;
+}
+#jingqu .hjc_jiudian .right>span:nth-of-type(1){
+	color: #de0707;
+	font-weight: bold;
+	font-size: 16px;
+}
+#jingqu .hjc_jiudian .right>span:nth-of-type(2){
+	color: #ddd;
+	font-weight: bold;
+	font-size: 9px;
+	text-decoration: line-through;
+}
+#jingqu .hjc_jiudian .right button{
+	width: 72px;
+	height: 23px;
+	border: 0;
+	outline: none;
+	background-color: #dc504b;
+	color: white;
+	border-radius: 4px;
+	cursor:pointer;
+}
+#jingqu .hjc_jiudian>div img{
+	width: 134px;
+	height: 100px;
+}
