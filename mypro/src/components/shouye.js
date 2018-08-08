@@ -123,8 +123,11 @@ class Shouye extends React.Component {
 		});
 		
 	}
+	
 	tap(){
+		var str = this.refs.didianJia.value
 		Store.dispatch(ActionDizhi(this.refs.didianJia.value))
+		this.props.history.push("/jingqu1/"+str)
 	}
 	
 	
