@@ -180,10 +180,10 @@ class Top extends React.Component{
 					<ul className='Zy_BunUl'>
 						<li className='Zy_BunLi1 ZyBL'>我的旅行</li>
 						<li className='Zy_BunLi2 ZyBL ZyBL1'>						
-						<Link to="/login">登录</Link>
+						<Link to="/login" className='ZyLi'>登录</Link>
 						<span></span>
 						</li>
-						<li className='Zy_BunLi3 ZyBL ZyBL1'><Link to="/regist">注册</Link></li>
+						<li className='Zy_BunLi3 ZyBL ZyBL1'><Link to="/regist" className='ZyLi'>注册</Link></li>
 					</ul>
 				</div>
 			</div>
@@ -195,6 +195,11 @@ class Top extends React.Component{
 	componentDidMount(){
 		
 		Store.subscribe(this.onchange)
+		
+		$(".ZyBL1").mousemove(function(){
+			$(this).css({'background':'red'})
+		})
+		
 		
 	}
 	
