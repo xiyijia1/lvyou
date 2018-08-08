@@ -94,7 +94,13 @@ ul{
 li{
 	list-style: none;
 }
-.qyg_data{
+
+.qyg_info li{
+	
+	border-bottom:1px dashed #DDDDDD;
+	margin-top:3px;
+}
+.qyg_info .qyg_data{
 	position: relative;
 	height:70px;
 	line-height: 70px;
@@ -110,43 +116,43 @@ li{
 	position: relative;
 }
 
-.qyg_data span{
+.qyg_info .qyg_data span{
 	position: absolute;
 	font-size:12px;
 	left:40px;
 	
 	
 }
-.qyg_data i{
+.qyg_info .qyg_data i{
 	position: absolute;
 	font-size:12px;
 	font-style: normal;
 	color:darkorange;
 	border-bottom:1px solid #EFF7FB;
 }
-.qyg_data .qyg_lvshi{
+.qyg_info .qyg_data .qyg_lvshi{
 	
 	left:290px;
 	
 }
-.qyg_data .qyg_danjia{
+.qyg_info .qyg_data .qyg_danjia{
 	
 	left:670px;
 	
 }
-.qyg_btn{
+.qyg_info .qyg_btn{
 	width:15px;
 	height:18px;
 	line-height:16px;
 }
-.qyg_data .qyg_caozuo{
+.qyg_info .qyg_data .qyg_caozuo{
 	position: absolute;
 	left:460px;
 	line-height:70px;
 	
 	
 }
-.qyg_data .qyg_del{
+.qyg_info .qyg_data .qyg_del{
 	position: absolute;
 	right:70px;
 	top:25px;

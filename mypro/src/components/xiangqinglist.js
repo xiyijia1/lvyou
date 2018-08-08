@@ -1,22 +1,26 @@
 import React from 'react'
 import $ from 'jquery'
 import '../css/zhxiangqing.css'
+import Store from '../redux/Store'
 import {BrowserRouter as Router,Route,Link,Switch,Redirect} from 'react-router-dom';
 import Top from './top'
 import Footer from './footer'
 import Mock from 'mockjs';
 import XiangQing from '../data/xiangqingList';
 Mock.mock("http://www.xiangqingList.com",XiangQing);
+
 class Xiangqing extends React.Component {
 	constructor(props){
 		super(props)
 		this.state = {
+				name:Store.getState().name,
 				city:"",
 				address:"",
 				price:"",
 				tit:"",
 				pingfen:""
 				}
+		this.onchange1=this.onchange1.bind(this)
 		}
 	
 	
@@ -41,7 +45,35 @@ class Xiangqing extends React.Component {
 			}
 		});
 	
-	}	
+	}
+	
+	send(){
+		var _this = this;
+		
+		var count = 0;
+		
+		if(this.state.name == undefined){
+			
+			window.location.href="/login"	
+		}else{
+			$.ajax({
+				type:"post",
+				url:"http://127.0.0.1:8000/detail",
+				data:{add:_this.state.city,price:_this.state.price,phoneNum:_this.state.name},
+				success:function(data){
+					if(data==1){
+						_this.props.history.push("/gouwuche")
+					}
+					
+				}
+			});
+		}	
+	}
+
+	onchange1(){
+			var data=Store.getState();
+			this.setState({name:data.name})
+		}
 	
 	componentDidMount(){
 		var _this = this;
@@ -71,6 +103,7 @@ class Xiangqing extends React.Component {
 				
 			})
 		})()
+		Store.subscribe(this.onchange1);
 	}
 	render(){
 		return(
@@ -138,7 +171,7 @@ class Xiangqing extends React.Component {
 					<p>
 						<span>￥</span>
 						<span>{this.state.price}</span>
-						<span className="btn">加入购物车</span>
+						<span className="btn" onClick={this.send.bind(this)}>加入购物车</span>
 						<button className="btn1">购买</button>
 					</p>
 				</div>
