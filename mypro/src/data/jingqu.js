@@ -227,7 +227,8 @@ function createData(){
 			{
 				'jiben':'@jingqu_jianjie',
 				'imgurl':'@jingqu_imgurl',
-				'city':'@city(true)',
+				'city':'@city',
+				'province':'@province',
 				'county':'@county(true)',
 				'price':'@integer(30,500)',
 				'pingfen':'@float(1,4,1,1)'

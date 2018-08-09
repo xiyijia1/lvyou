@@ -12,7 +12,9 @@ class JingQu2 extends React.Component{
 	constructor(props){
 		super(props);
 		this.state={
-			current:1
+			current:1,
+			jingqus:[],
+			jingquliebiao:[]
 		}
 	}
 	
@@ -22,28 +24,84 @@ class JingQu2 extends React.Component{
 		$('.hjc_qingqu_section').eq(index).css('display','flex').siblings('.hjc_qingqu_section').css('display','none');	
 	}
 //	分页
-	 onChange(page){
-	    console.log(page);
+	onChange(page){
 	    this.setState({
 	      current: page,
 	    });
-	  }
+	    this.setState({
+	    	jingquliebiao:this.state.jingqus.slice((page-1)*5,page*5)
+	    })
+	}
 
 	
 	
 	componentDidMount(){
+		var _this = this;
 		$('.hjc_qingqu_section').eq(0).css('display','flex').siblings('.hjc_qingqu_section').css('display','none');
 		$.ajax({
 			type:"get",
 			url:"http://chaoge.com/getJingus",
 			async:true,
 			success:function(data){
-				console.log(data);
+				var jingqus = JSON.parse(data).jingqu;
+				_this.setState({
+					jingqus:jingqus,
+					jingquliebiao:jingqus.slice(0,5)
+				})	
+				
 			}
 		});
 	}
 	
 	render(){
+		var _this = this;
+		var jingqus = [];
+		this.state.jingquliebiao.map(function(item,i){
+			jingqus.push(<div key={i} className='jingdian'>
+							<img src={item.imgurl} />
+							<div className='mid'>
+								<p>{item.jiben.name}</p>
+								<p>
+									<span>{item.city}</span>
+									<span>|</span>
+									<span>{item.jiben.jieshao}</span>
+								</p>
+								<p>
+									<span>{item.jiben.special[0]}</span>
+									<span>{item.jiben.special[1]}</span>
+									<span>{item.jiben.special[3]}</span>
+									<span>{item.jiben.special[4]}</span>
+									<span>{item.jiben.special[5]}</span>
+								</p>
+								<p>
+									{item.county}
+								</p>
+							</div>
+							<div className='right'>
+								<span>$<strong>{item.price}</strong></span>
+								<button>立即预订</button>
+								<span>去看看&gt;&gt;</span>
+							</div>
+							<div className='jingdian_fuhao'>
+								<span></span>
+							</div>
+						</div>)
+		})
+		var jingqus_jingxuan = [];
+		this.state.jingqus.slice(6,11).map(function(item,i){
+			jingqus_jingxuan.push(
+				<div key={i} className='jjingdian'>
+					<img src={item.imgurl} />
+					<div>
+						<p>{item.jiben.name}</p>
+						<span>$<strong>{item.price}</strong></span>
+						<span>$<strong>113</strong></span>
+						<p>去看看&gt;&gt;</p>
+					</div>
+				</div>
+			)
+		})
+		console.log(jingqus_jingxuan);
 		return (
 			<div id="jingqu">
 				<Top />
@@ -63,133 +121,13 @@ class JingQu2 extends React.Component{
 				{/*景区1*/}
 				<div className='hjc_qingqu_section'>
 					<div className='jingdians'>
-						<div className='jingdian'>
-							<img src={img1} />
-							<div className='mid'>
-								<p>下汤温泉度假村</p>
-								<p>
-									<span>平顶山</span>
-									<span>|</span>
-									<span>一年四季都能体验的水上 运动圣地</span>
-								</p>
-								<p>
-									<span>温泉</span>
-									<span>度假村</span>
-									<span>河南</span>
-									<span>平顶山</span>
-									<span>下汤温泉度假村</span>
-								</p>
-								<p>
-									平顶山鲁山县下汤镇
-								</p>
-							</div>
-							<div className='right'>
-								<span>$<strong>85</strong></span>
-								<button>立即预订</button>
-								<span>去看看&gt;&gt;</span>
-							</div>
-							<div className='jingdian_fuhao'>
-								<span></span>
-							</div>
-						</div>
-						<div className='jingdian'>
-							<img src={img1} />
-							<div className='mid'>
-								<p>下汤温泉度假村</p>
-								<p>
-									<span>平顶山</span>
-									<span>|</span>
-									<span>一年四季都能体验的水上 运动圣地</span>
-								</p>
-								<p>
-									<span>温泉</span>
-									<span>度假村</span>
-									<span>河南</span>
-									<span>平顶山</span>
-									<span>下汤温泉度假村</span>
-								</p>
-								<p>
-									平顶山鲁山县下汤镇
-								</p>
-							</div>
-							<div className='right'>
-								<span>$<strong>85</strong></span>
-								<button>立即预订</button>
-								<span>去看看&gt;&gt;</span>
-							</div>
-							<div className='jingdian_fuhao'>
-								<span></span>
-							</div>
-						</div>
-						<div className='jingdian'>
-							<img src={img1} />
-							<div className='mid'>
-								<p>下汤温泉度假村</p>
-								<p>
-									<span>平顶山</span>
-									<span>|</span>
-									<span>一年四季都能体验的水上 运动圣地</span>
-								</p>
-								<p>
-									<span>温泉</span>
-									<span>度假村</span>
-									<span>河南</span>
-									<span>平顶山</span>
-									<span>下汤温泉度假村</span>
-								</p>
-								<p>
-									平顶山鲁山县下汤镇
-								</p>
-							</div>
-							<div className='right'>
-								<span>$<strong>85</strong></span>
-								<button>立即预订</button>
-								<span>去看看&gt;&gt;</span>
-							</div>
-							<div className='jingdian_fuhao'>
-								<span></span>
-							</div>
-						</div>
-						<Pagination current={this.state.current} onChange={this.onChange.bind(this)} total={50} />
+						{/*景区列表*/}
+						{jingqus}
+						<Pagination current={this.state.current}  pageSize={5} onChange={this.onChange.bind(this)} total={this.state.jingqus.length} />
 					</div>
 					<div className='jjingdians'>
 						<h3>特色精选</h3>
-						<div className='jjingdian'>
-							<img src={img1} />
-							<div>
-								<p>下汤温泉度假村</p>
-								<span>$<strong>85</strong></span>
-								<span>$<strong>113</strong></span>
-								<p>去看看&gt;&gt;</p>
-							</div>
-						</div>
-						<div className='jjingdian'>
-							<img src={img1} />
-							<div>
-								<p>下汤温泉度假村</p>
-								<span>$<strong>85</strong></span>
-								<span>$<strong>113</strong></span>
-								<p>去看看&gt;&gt;</p>
-							</div>
-						</div>
-						<div className='jjingdian'>
-							<img src={img1} />
-							<div>
-								<p>下汤温泉度假村</p>
-								<span>$<strong>85</strong></span>
-								<span>$<strong>113</strong></span>
-								<p>去看看&gt;&gt;</p>
-							</div>
-						</div>
-						<div className='jjingdian'>
-							<img src={img1} />
-							<div>
-								<p>下汤温泉度假村</p>
-								<span>$<strong>85</strong></span>
-								<span>$<strong>113</strong></span>
-								<p>去看看&gt;&gt;</p>
-							</div>
-						</div>
+						{jingqus_jingxuan}
 					</div>
 				</div>
 				{/*门票+酒店*/}
