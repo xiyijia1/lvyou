@@ -165,7 +165,7 @@ class Top extends React.Component{
 					<ul>
 						<li className='Zy_Bli1 BunZ'><a href='/'>首页</a></li>
 						<li className='Zy_Bli2 BunZ'><a href='/target'>目的地</a></li>
-						<li className='Zy_Bli3 BunZ'><a href='/'>景区门票</a></li>
+						<li className='Zy_Bli3 BunZ'><a href='/jingqu2'>景区门票</a></li>
 						<li className='Zy_Bli4 BunZ'><a href='/'>旅游视频</a></li>
 						<li className='Zy_Bli5 BunZ'>
 							<a href='/' className="zy_lvb">旅游百宝箱</a>
